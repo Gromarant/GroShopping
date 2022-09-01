@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.navBar {
+    align-items: center;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+.logo {
+    height: 64px;
+    width: 64px;
+}
+.navBar ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+.navbar ul > li {
+    text-decoration: none;
+}
