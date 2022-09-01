@@ -1,6 +1,5 @@
-// import { Link, Route } from 'react-router-dom';
 import '../styles/App.css';
-import NavBar from './NavBar';
+import NavBar from './NavBar.jsx';
 
 function App() {
   return (
