@@ -1,6 +1,6 @@
 import '../styles/App.css';
 import NavBar from '../components/NavBar';
-import { SearchBar } from './SearchBar';
+import { SearchBar } from '../components/SearchBar';
 
 
 function App() {
