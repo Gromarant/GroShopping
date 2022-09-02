@@ -1,37 +1,47 @@
 import MicRoundedIcon from '@mui/icons-material/MicRounded';
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import FilterListRoundedIcon from '@mui/icons-material/FilterListRounded';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { getSearchResult } from './actions';
+import { InputText } from '../InputText';
+import './style.css'
 
 export const SearchBar = ( { placeholder, data } ) => {
-    const [filteredData, setFilteredData] = useState( [] );
+    const [searchInput, setSearchInput] = useState( '' );
+    const [resultItems, setResultItems] = useState( [] );
 
-    const handleFilter = (event) => {
-        const searchInput = event.target.value;
-        const newSearch = data.filter( (value) => {
-            return value.title.toLowerCase().includes(searchInput.toLowerCase())
-        });
+    const handleSearchInput = (event) => {
+        setSearchInput(event.target.value);
+    }
+    
 
-        const searchData = ( searchInput === "" ) ? [] : newSearch;
-        setFilteredData(searchData);
-    };
+    useEffect(() => {
+        const search = async (criteria) => {
+            const data = await getSearchResult();
+            const filteredData = data.filter( (value) => {
+                return value.title.toLowerCase().includes(criteria.toLowerCase())
+            });
+            setResultItems(filteredData);
+        }
+        search(searchInput);
+    }, [searchInput])
 
     return (
         <>
             <form className='searchBar' role="search">
-                <input className='SearchBar__input' type="text" placeholder={ placeholder } area-label="Search through site" onChange={handleFilter}></input>
+                <InputText className='SearchBar__input' type="text" value={searchInput} onChange={handleSearchInput} placeholder={ placeholder } areaLabel="Search through site"/>
                     <MicRoundedIcon className='SearchBar__talkIcon'/>
                     <SearchRoundedIcon className='SearchBar__searchIcon'/>
                     <FilterListRoundedIcon className='SearchBar__filterIcon'/>
             </form>
 
             {
-                filteredData.length !== 0 && (
+                resultItems.length !== 0 && (
                     <section className='data'>
                         <div className='data__results'>
-                            {filteredData.slice(0, 15).map((value, key) => {
+                            {resultItems.slice(0, 15).map((value, key) => {
                                 return (
-                                    <a className='data__result-item' href={value.link} target="blank">
+                                    <a key={value.title + value.author + value.year} className='data__result-item' href={value.link} target="blank">
                                         <p>{value.title}</p>
                                     </a>)
                             })}

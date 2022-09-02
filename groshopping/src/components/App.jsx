@@ -1,5 +1,5 @@
 import '../styles/App.css';
-import NavBar from './NavBar.jsx';
+import NavBar from '../components/NavBar';
 import { SearchBar } from './SearchBar';
 
 
