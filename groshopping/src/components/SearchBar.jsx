@@ -4,6 +4,11 @@ import FilterListRoundedIcon from '@mui/icons-material/FilterListRounded';
 import { useState } from 'react';
 
 export const SearchBar = ( { placeholder, data } ) => {
+    const [filteredData, setFilteredData] = useState( [] );
+    const handleFilter = (event) => {
+        const searchInput = event.target.value
+    }
+
     return (
         <>
             <form className='searchBar' role="search">
