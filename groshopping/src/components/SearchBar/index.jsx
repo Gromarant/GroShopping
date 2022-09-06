@@ -4,7 +4,7 @@ import FilterListRoundedIcon from '@mui/icons-material/FilterListRounded';
 import { useEffect, useState } from 'react';
 import { getSearchResult } from './actions';
 import { InputText } from '../InputText';
-import './style.css'
+import './style.scss'
 
 export const SearchBar = ( { placeholder, data } ) => {
     const [searchInput, setSearchInput] = useState( '' );

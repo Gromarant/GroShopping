@@ -1,4 +1,4 @@
-import '../styles/App.css';
+import '../styles/App.scss';
 import NavBar from '../components/NavBar';
 import { SearchBar } from '../components/SearchBar';
 
