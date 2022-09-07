@@ -29,14 +29,16 @@ export const SearchBar = ( { placeholder, data } ) => {
     return (
         <>
             <form className='searchBar' role="search">
-                <InputText className='SearchBar__input' type="text" value={searchInput} onChange={handleSearchInput} placeholder={ placeholder } areaLabel="Search through site"/>
+                <div className='searchBar_container'>
+                    <InputText className='SearchBar__input' type="text" value={searchInput} onChange={handleSearchInput} placeholder={ placeholder } areaLabel="Search through site"/>
                     <MicRoundedIcon className='SearchBar__talkIcon'/>
                     <SearchRoundedIcon className='SearchBar__searchIcon'/>
-                    <FilterListRoundedIcon className='SearchBar__filterIcon'/>
+                </div>
+                <FilterListRoundedIcon className='SearchBar__filterIcon'/>
             </form>
 
             {
-                resultItems.length !== 0 && (
+                searchInput.length !== 0 && (
                     <section className='data'>
                         <div className='data__results'>
                             {resultItems.slice(0, 15).map((value, key) => {
@@ -47,7 +49,7 @@ export const SearchBar = ( { placeholder, data } ) => {
                             })}
                         </div>
                     </section>
-                )
+                )                                                                                           
             }
         </>
     );
