@@ -22,15 +22,12 @@
             height: 48px;
             margin-left: 10px;
             width: 100%;
-            & {
-                border: none;
-            }
         }  
         .SearchBar__talkIcon {
             color:rgb(7, 102, 96);
             font-size: 2rem;
             &:hover {
-                background-color: aqua;
+                background-color: rgb(97, 225, 221);
                 border-radius: 50%;
                 height: 2.5rem;
                 width: 2.5rem;
@@ -40,7 +37,7 @@
             color:rgb(7, 102, 96);
             font-size: 2rem;
             &:hover {
-                background-color: aqua;
+                background-color: rgb(97, 225, 221);
                 border-radius: 50%;
                 height: 2.5rem;
                 padding: 0.1rem;
