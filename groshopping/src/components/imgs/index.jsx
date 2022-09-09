@@ -1,7 +1,7 @@
-export const Img = ( {className, src, alt} ) => {
+export const Img = ( {className, alt} ) => {
   return (
     <>
-        <img src={src} alt={alt} className={className} />
+        <img src={'https://avatars.githubusercontent.com/u/23740599?s=280&v=4'} alt={alt} className={className} />
     </>
   )
 }

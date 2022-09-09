@@ -1,4 +1,5 @@
-import logo from '../../images/logo.svg'
+import logo from '../../images/logo.svg';
+import NotificationsRoundedIcon from '@mui/icons-material/NotificationsRounded';
 import './style.scss';
 
 function NavBar() {
@@ -11,7 +12,7 @@ function NavBar() {
           <li>Shopping Lists</li>
           <li>Offerts</li>
         </ul>
-        <span>Notifications</span>
+        <NotificationsRoundedIcon className='bell'/>
       </nav>
     </>
   );
