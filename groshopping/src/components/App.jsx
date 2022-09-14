@@ -1,6 +1,6 @@
 import '../styles/App.scss';
-import NavBar from '../components/NavBar';
-import { SearchBar } from '../components/SearchBar';
+import { NavBar } from './NavBar';
+import { SearchBar } from './SearchBar';
 import { ProductCard } from './ProductCard';
 
 

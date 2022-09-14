@@ -6,7 +6,7 @@ import { getSearchResult } from './actions';
 import { InputText } from '../InputText';
 import './style.scss'
 
-export const SearchBar = ( { placeholder, data } ) => {
+export const SearchBar = ( { placeholder } ) => {
     const [searchInput, setSearchInput] = useState( '' );
     const [resultItems, setResultItems] = useState( [] );
 
@@ -16,14 +16,11 @@ export const SearchBar = ( { placeholder, data } ) => {
     
 
     useEffect(() => {
-        const search = async (criteria) => {
-            const data = await getSearchResult();
-            const filteredData = data.filter( (value) => {
-                return value.title.toLowerCase().includes(criteria.toLowerCase())
-            });
-            setResultItems(filteredData);
+        const search = async () => {
+            const data = await getSearchResult(searchInput);
+            setResultItems(data);
         }
-        search(searchInput);
+        search();
     }, [searchInput])
 
     return (
@@ -41,12 +38,13 @@ export const SearchBar = ( { placeholder, data } ) => {
                 searchInput.length !== 0 && (
                     <section className='data'>
                         <div className='data__results'>
-                            {resultItems.slice(0, 15).map((value, key) => {
-                                return (
-                                    <a key={value.title + value.author + value.year} className='data__result-item' href={value.link} target="blank">
-                                        <p>{value.title}</p>
-                                    </a>)
-                            })}
+                            <ul>
+                                {resultItems.map((product) => {
+                                    return (
+                                        <li key={product.id} className='data__result-item'>{product.name}</li>
+                                    )
+                                })}
+                            </ul>
                         </div>
                     </section>
                 )                                                                                           

@@ -14,12 +14,20 @@
         width: 90%;
         margin: 0.5rem;
     }
-    .productCard-button{
-        border: none;
-        border-radius: 0.5rem;
-        font-size: 1rem;
-        padding: 0.5rem;
-        width: 80%;
+    .productCard-button-container{
         background-color: rgb(118, 235, 41);
+        border-radius: 0.5rem;
+        border: none;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0.5rem;
+        width: 90%;
+        .productCard-button {
+        background-color: rgb(118, 235, 41);
+        border: none;
+        font-size: 1.1rem;
+        }
     }
 }
+   

@@ -1,7 +1,7 @@
 export const Button = ( {className, type, value} ) => {
   return (
     <>
-    <input className={className} type={type} value={value}></input>
+      <input className={className} type={type} value={value}></input>
     </>
   )
 }
@@ -9,7 +9,7 @@ export const Button = ( {className, type, value} ) => {
 export const ButtonIcon = ( {className, type, icon} ) => {
     return (
       <>
-      <input className={className} type={type}> {icon} </input>
+        <input className={className} type={type}> {icon} </input>
       </>
     )
   }

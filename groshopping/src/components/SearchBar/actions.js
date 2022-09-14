@@ -1,5 +1,5 @@
-import data from '../data/Data.json';
+import { callToApi } from '../../services/api';
 
-export const getSearchResult = async(params) => {
-    return data;
-}
+export const getSearchResult = async( searchInput ) => {
+    return callToApi( searchInput );
+};
