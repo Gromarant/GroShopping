@@ -10,8 +10,7 @@ function App() {
       <NavBar /> 
       <section className='mainContainer'>
         <SearchBar placeholder={"Search what you want"}/>
-        <ProductCard />
-        <ProductCard />
+        <div className="displayCards"></div>
       </section>
     </>
   );

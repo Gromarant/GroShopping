@@ -3,12 +3,12 @@ import {Img} from '../imgs/index';
 import { Button } from '../Buttons/index';
 import './style.scss';
 import { useState} from 'react';
-// import { callToApi } from '../../services/api'
+import { callToApi } from '../../services/api'
 
 
 export const ProductCard = () => {
   const [starWarsData] = useState({});
-  // const [product, setProduct] = useState([])  // , setStarWarsData;
+  const [product, setProduct] = useState([])  // , setStarWarsData;
 
   // useEffect(() => {
   //   callToApi().then( (response) => {
