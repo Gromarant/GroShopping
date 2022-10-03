@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.navBar {
+    align-items: center;
+    background-color: aquamarine;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+    padding: 1rem 0.8rem;
+    width: 100vw;
+    .navBar__logo {
+        height: 64px;
+        width: 64px;
+    }
+    .navBar__menu-content {
+        display: flex;
+        justify-content: space-between;
+        width: 25%;
+        .navBar__list {
+            display: none;
+            .navBar__list-item {
+                display: none;
+            }
+        }
+        .navBar__bell {
+            color: rgb(10, 81, 81);
+            font-size: 1.8rem;
+            justify-self: right;
+        }
+        .navBar__hambur-menu {
+            color: rgb(10, 81, 81);
+            font-size: 2rem;
+        }
+    }
+    
+}

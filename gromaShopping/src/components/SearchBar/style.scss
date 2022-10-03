@@ -1,0 +1,58 @@
+.searchBar {
+    align-items: center;
+    display: flex;
+    gap: 15px;
+    height: 25vh;
+    justify-content: center;
+    width: 100vw;
+    .searchBar_container {
+        align-items: center;
+        background-color: aliceblue;
+        border-radius: 20px;   
+        display: flex;
+        gap: 15px; 
+        justify-content: center;
+        margin: 0; 
+        padding-right: 10px;
+        width: 75%;  
+        .SearchBar__input {
+            background-color: aliceblue;
+            border: none;
+            font-size: 1rem;
+            height: 48px;
+            margin-left: 10px;
+            width: 100%;
+        }  
+        .SearchBar__talkIcon {
+            color:rgb(7, 102, 96);
+            font-size: 2rem;
+            &:hover {
+                background-color: rgb(97, 225, 221);
+                border-radius: 50%;
+                height: 2.5rem;
+                width: 2.5rem;
+            }
+        }   
+        .SearchBar__searchIcon {
+            color:rgb(7, 102, 96);
+            font-size: 2rem;
+            &:hover {
+                background-color: rgb(97, 225, 221);
+                border-radius: 50%;
+                height: 2.5rem;
+                padding: 0.1rem;
+                width: 2.5rem;
+            }
+        }                                                       
+    }
+    .SearchBar__filterIcon {
+        color:rgb(7, 102, 96);
+        font-size: 2rem;
+        &:hover {
+            height: 2.8rem;
+            width: 2.8rem;
+        }
+    } 
+}
+
+
